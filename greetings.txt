@@ -1,0 +1,13 @@
+hallo
+hello
+hi
+hey
+hai
+good morning
+good afternoon
+good evening
+good night
+selamat pagi
+selamat siang
+selamat sore
+selamat malam

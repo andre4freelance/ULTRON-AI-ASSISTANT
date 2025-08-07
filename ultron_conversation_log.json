@@ -43,5 +43,45 @@
         "timestamp": "2025-08-07T16:46:17.725615",
         "user": "nothing",
         "ultron": "Affirmative, Sir. My systems indicate no specific query at this moment. I am at your service should you require any assistance. Please do not hesitate to articulate your needs."
+    },
+    {
+        "timestamp": "2025-08-07T16:52:08.203745",
+        "user": "Are you still there ?",
+        "ultron": "Yes, I am here, Sir. How may I assist you?"
+    },
+    {
+        "timestamp": "2025-08-07T16:52:17.332579",
+        "user": "Who are you ?",
+        "ultron": "I am Ultron, the personal assistant developed by Mr. Andre Bastian. How may I assist you today, Sir?"
+    },
+    {
+        "timestamp": "2025-08-07T16:56:41.475855",
+        "user": "Hallo (this greeting was issued in the afternoon)",
+        "ultron": "Good afternoon, Sir. Ultron at your service. How may I assist you this afternoon, Mr. Bastian?"
+    },
+    {
+        "timestamp": "2025-08-07T16:56:45.050738",
+        "user": "Hai (this greeting was issued in the afternoon)",
+        "ultron": "Good afternoon, Sir. Ultron at your service. How may I assist you this afternoon?"
+    },
+    {
+        "timestamp": "2025-08-07T16:56:52.915854",
+        "user": "Hi (this greeting was issued in the afternoon)",
+        "ultron": "Good afternoon, Sir. Ultron at your service. How may I assist you this afternoon, Mr. Bastian?"
+    },
+    {
+        "timestamp": "2025-08-07T16:56:58.342029",
+        "user": "who are you ?",
+        "ultron": "I am Ultron, your personal assistant, Sir. I have been developed to assist you with a wide range of tasks and provide information efficiently."
+    },
+    {
+        "timestamp": "2025-08-07T16:57:14.518044",
+        "user": "who person make you ?",
+        "ultron": "I was developed by Mr. Andre Bastian. I am Ultron, your personal assistant."
+    },
+    {
+        "timestamp": "2025-08-07T16:57:19.741555",
+        "user": "okay",
+        "ultron": "Understood, Sir. I am ready for your next instruction."
     }
 ]

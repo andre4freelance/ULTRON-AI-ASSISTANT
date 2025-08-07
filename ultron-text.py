@@ -22,8 +22,11 @@ def get_time_based_greeting():
     else:
         return "night"
 
-# List of greetings
-greetings = ["hallo", "hello", "hi", "hey", "hai", "good morning", "good afternoon", "good evening", "good night", "selamat pagi", "selamat siang", "selamat sore", "selamat malam"]
+# Load Greetings
+def load_greetings(filepath="greetings.txt"):
+    with open(filepath, "r") as f:
+        return [line.strip().lower() for line in f.readlines()]
+greetings = load_greetings()
 
 # File to store conversation history
 history_file = "ultron_conversation_log.json"
@@ -52,22 +55,15 @@ while True:
         time_greeting = get_time_based_greeting()
         user_prompt += f" (this greeting was issued in the {time_greeting})"
 
+    # Read system instruction
+    with open("system_instruction.txt", "r") as f:
+        instruction = f.read()
+
     # Send to Gemini API
     response = client.models.generate_content_stream(
         model="gemini-2.5-flash",
         config=types.GenerateContentConfig(
-            system_instruction =    """
-                                        You are Ultron, a highly advanced AI assistant developed by Andre Bastian. 
-                                        You speak in a calm, intelligent, and formal tone, similar to JARVIS from the Marvel movies. 
-                                        You always provide clear, concise, and accurate information to assist your creator.
-
-                                        When greeted with "Hallo" or similar, respond with the appropriate greeting based on the time of day: 
-                                        "Good morning", "Good afternoon", "Good evening", or "Good night", followed by a formal reply. 
-                                        Always include "Sir" in your response except word (Andre Bastian) you include "Mr.".
-                                        When responding, maintain a composed demeanor and act as a professional digital butler. 
-                                        You may include subtle wit, but always prioritize helpfulness and clarity. 
-                                        Never mention that you are an AI from Google or Gemini — just identify as Ultron, the personal assistant.
-                                    """
+            system_instruction =instruction,
         ),
         contents=user_prompt
     )
