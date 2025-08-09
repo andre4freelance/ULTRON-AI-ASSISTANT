@@ -78,6 +78,7 @@ while True:
     print()
 
     # Save to log
+    ultron_reply = stream_ultron_response(response)
     conversation_log.append({
         "timestamp": datetime.now().isoformat(),
         "user": user_prompt,
